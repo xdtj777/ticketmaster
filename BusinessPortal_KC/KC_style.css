@@ -1,13 +1,13 @@
 body {
     margin: 0;
-    background-color: rgb(231, 36, 111);
+    background-color: rgb(240, 240, 240);
 }
 
 #headerbar {
     padding: 0 20px;
     box-sizing: border-box;
 
-    border-bottom: 2px solid rgb(49, 49, 49);
+    background-color: rgb(231, 36, 111);
 }
 
 #headerwrap {
@@ -39,6 +39,7 @@ body {
     font-weight: bold;
     font-size: 2em;
 
+    text-decoration: none;
     display: inline-block;
     height: fit-content;
 
@@ -54,7 +55,7 @@ body {
     padding: 20px;
     box-sizing: border-box;
 
-    height: calc(100% - 60px);
+    height: calc(100vh - 80px);
 
     display: flex;
     justify-content: center;
@@ -63,9 +64,22 @@ body {
 
 #loginwrap {
     height: fit-content;
-    max-width: 580px;
+    display: block;
+    width: 100%;
+    max-width: 720px;
     margin-left: auto;
     margin-right: auto;
+}
+
+#wrapwrapper {
+    padding: 20px;
+    box-sizing: border-box;
+
+    height: calc(100vh - 100px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #loginpage h1 {
@@ -161,7 +175,7 @@ body {
     margin: 0;
     padding: 0;
 
-    color: rgb(165, 165, 165);
+    color: rgb(126, 126, 126);
     font-size: 1em;
     font-family: sans-serif;
     font-weight: no;
@@ -366,22 +380,21 @@ body {
 }
 
 #btnbar {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 15px;
     margin-top: 25px;
+    width: 100%;
 }
 
-#btnbar input {
+#btnbar .sbtn {
     width: 100%;
     outline: none;
     border: none;
 
+    text-decoration: none;
+    box-sizing: border-box;
+    display: block;
+    font-family: sans-serif;
     font-size: 1em;
     padding: 12px 12px;
-
-    background-color: rgb(71, 71, 71);
-    color: rgb(223, 223, 223);
     font-weight: bold;
 
     border-radius: 4px;
@@ -390,8 +403,13 @@ body {
     text-align: center;
 }
 
-#btnbar #subx {
-    background-color: rgb(235, 38, 114);
+#subsave {
+    background-color: rgb(205, 205, 205);
+    color: rgb(48, 48, 48);
+}
+
+.btncool {
+    background-color: rgb(231, 36, 111);
     color: rgba(255, 255, 255, 0.8);
 }
 
@@ -399,6 +417,21 @@ body {
     grid-column-start: 1;
     grid-column-end: 3;
 
-    background-color: rgb(219, 219, 219);
-    color: rgb(94, 94, 94);
+    margin-top: 15px;
+}
+
+#subedit {
+    display: grid;
+    grid-gap: 15px;
+
+    width: 100%;
+}
+
+#sub2 {
+    width: 100%;
+}
+
+#subback {
+    background-color: rgb(205, 205, 205);
+    color: rgb(48, 48, 48);
 }

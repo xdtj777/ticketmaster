@@ -2,25 +2,33 @@
 
 <head>
     <link rel="stylesheet" href="TM_style.css">
+    <title>TicketMaster</title>
 </head>
 
 <body>
     <div id="headerbar">
         <div id="headerwrap">
-            <a id="headertitle">TICKET<span>MASTER</span></a>
+            <a id="headertitle" href="TM_List.html">TICKET<span>MASTER</span></a>
             <div id="usericon"></div>
         </div>
     </div>
 
     <div id="ticketlist">
-        <h1>Ticket Editor / Q002A</h1>
+        <h1 id="editorheadline">Ticket Editor / Bearbeiten</h1>
 
         <div id="editfield">
             <form action="">
                 <div id="editbar1">
-                    <input type="text" id="inTID" disabled="true" value="#Q002A">
-                    <input type="text" id="inASP" placeholder="ASP">
-                    <input type="text" id="inIDK" placeholder="IDK">
+                    <input type="text" id="inTID" disabled="true" value="#00000">
+                    <select name="cid" id="inCID">
+                        <option value="0" disabled selected>Kunde</option>
+                    </select>
+                    <select name="abt" id="inABT">
+                        <option value="0" disabled selected>Abteilung</option>
+                    </select>
+                    <select name="prio" id="inPrio">
+                        <option value="0" disabled selected>Priorität</option>
+                    </select>
                 </div>
 
                 <input type="text" id="inTitle" placeholder="Titel">
@@ -29,14 +37,21 @@
                 </div>
 
                 <div id="btnbar">
-                    <input type="submit" id="subsave" value="✔ SPEICHERN">
-                    <input type="submit" id="subx" value="✖ ERLEDIGT">
-                    <input type="submit" id="btnback" value="ABBRUCH">
+                    <div id="subedit">
+                        <a class="sbtn" id="subsave" onclick="updateTicket()">✔ SPEICHERN</a>
+                        <a class="sbtn btncool" id="subx" onclick="closeTicket()">✖ ERLEDIGT</a>
+                        <a class="sbtn" id="subback" onclick="exit()">ZURUCK</a>
+                    </div>
+                    <div id="sub2">
+                        <a class="sbtn btncool" id="subnew" onclick="createNewTicket()">+ ERSTELLEN</a>
+                    </div>
                 </div>
             </form>
         </div>
     </div>
 </body>
+
+<script src="TM_Editor.js"></script>
 
 <style>
     

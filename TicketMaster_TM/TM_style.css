@@ -35,6 +35,7 @@ body {
     color: rgb(215, 215, 215);
     font-family: Impact;
     font-size: 2em;
+    text-decoration: none;
 
     display: inline-block;
     height: fit-content;
@@ -243,11 +244,15 @@ body {
     font-family: sans-serif;
     font-size: 1em;
 
-    transition: 0.2s ease;
+    transition: 0.1s linear;
+}
+
+.dt_closed {
+    opacity: 0.4;
 }
 
 .dt_row:hover {
-    background-color: rgb(45, 45, 45);
+    background-color: rgb(48, 48, 48);
     cursor: pointer;
 }
 
@@ -269,8 +274,10 @@ body {
     border-radius: 4px;
     width: 100%;
     text-align: center;
-    background-color: rgba(248, 62, 77, 0.6);
-    color: rgba(255, 255, 255, 0.58);
+
+    background-color: rgba(255, 255, 255, 0.082);
+    color: rgb(243, 69, 83);
+
     font-weight: bold;
 
     padding: 6px;
@@ -280,8 +287,18 @@ body {
 }
 
 .dt_type_low {
-    background-color: rgb(68, 68, 68);
+    background-color: rgba(255, 255, 255, 0.082);
     color: rgb(82, 194, 114);
+}
+
+.dt_type_mid {
+    background-color: rgba(255, 255, 255, 0.082);
+    color: rgb(233, 161, 53);
+}
+
+.dt_type_xpress {
+    background-color: rgba(248, 62, 77, 0.6);
+    color: rgba(255, 255, 255, 0.58);
 }
 
 .dt_id {
@@ -293,6 +310,11 @@ body {
     padding: 6px;
     border-radius: 3px;
     box-sizing: border-box;
+
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .dt_cid span {
@@ -314,7 +336,7 @@ body {
 #editfield #editbar1 {
     width: 100%;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 15px;
 
     margin-bottom: 15px;
@@ -331,8 +353,27 @@ body {
     background-color: rgb(58, 58, 58);
     color: rgb(197, 197, 197);
 
+    box-sizing: border-box;
     border-radius: 4px;
     overflow: hidden;
+}
+
+#editfield select {
+    width: 100%;
+    outline: none;
+    border: none;
+
+    font-size: 1em;
+    padding: 9px 12px;
+
+    background-color: rgb(58, 58, 58);
+    color: rgb(197, 197, 197);
+
+    box-sizing: border-box;
+    border-radius: 4px;
+    overflow: hidden;
+
+    text-align: center;
 }
 
 #inTID {
@@ -364,22 +405,21 @@ body {
 }
 
 #btnbar {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 15px;
     margin-top: 25px;
+    width: 100%;
 }
 
-#btnbar input {
+#btnbar .sbtn {
     width: 100%;
     outline: none;
     border: none;
 
+    text-decoration: none;
+    box-sizing: border-box;
+    display: block;
+    font-family: sans-serif;
     font-size: 1em;
     padding: 12px 12px;
-
-    background-color: rgb(175, 175, 175);
-    color: rgb(48, 48, 48);
     font-weight: bold;
 
     border-radius: 4px;
@@ -388,7 +428,12 @@ body {
     text-align: center;
 }
 
-#btnbar #subx {
+#subsave {
+    background-color: rgb(175, 175, 175);
+    color: rgb(48, 48, 48);
+}
+
+.btncool {
     background-color: rgba(193, 41, 231, 0.3);
     color: rgb(219, 128, 255);
 }
@@ -399,4 +444,28 @@ body {
 
     background-color: rgb(65, 65, 65);
     color: rgb(190, 190, 190);
+
+    margin-top: 15px;
+}
+
+#subedit {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 15px;
+
+    width: 100%;
+}
+
+#sub2 {
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#subback {
+    background-color: rgb(58, 58, 58);
+    color: rgb(172, 172, 172);
+
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
