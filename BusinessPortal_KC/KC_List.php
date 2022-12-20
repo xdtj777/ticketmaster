@@ -1,19 +1,26 @@
+<?php
+include "dbase/KCAuth.php";
+?>
 <html>
 
 <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="KC_style.css">
+    <title>BusinessPortal</title>
 </head>
 
 <body>
     <div id="headerbar">
         <div id="headerwrap">
-            <a id="headertitle">Business<span>Portal</span></a>
-            <div id="usericon"></div>
+            <a id="headertitle" href="KC_Landing.php">Business<span>Portal</span></a>
+            <div id="usericon" onclick="logout()">
+                <img id="usericonimg" src="">
+            </div>
         </div>
     </div>
 
     <div id="ticketlist">
-        <h1>Konto / Meine Tickets</h1>
+        <h1>Mein Konto / Tickets</h1>
 
         <div id="sbar">
             <div id="searchbar">

@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Chivo+Mono:wght@400;700&family=VT323&display=swap');
+
 body {
     margin: 0;
     background-color: black;
+
+    font-family: 'Chivo Mono', sans-serif;
 }
 
 #headerbar {
@@ -13,8 +17,8 @@ body {
 
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 
     width: 100%;
 }
@@ -31,10 +35,17 @@ body {
     cursor: pointer;
 }
 
+#usericonimg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 #headertitle {
     color: rgb(215, 215, 215);
     font-family: Impact;
     font-size: 2em;
+    text-decoration: none;
 
     display: inline-block;
     height: fit-content;
@@ -51,7 +62,7 @@ body {
     padding: 20px;
     box-sizing: border-box;
 
-    height: calc(100% - 60px);
+    height: calc(100vh - 60px);
 
     display: flex;
     justify-content: center;
@@ -106,6 +117,7 @@ body {
     font-size: 1em;
     color: rgb(102, 102, 102);
 
+    font-family: 'Inter', sans-serif;
     text-align: center;
     width: 100%;
     display: block;
@@ -118,6 +130,7 @@ body {
     outline: none;
     border: none;
 
+    font-family: 'Inter', sans-serif;
     font-size: 1em;
     padding: 9px 12px;
 
@@ -135,6 +148,7 @@ body {
     outline: none;
     border: none;
 
+    font-family: 'Inter', sans-serif;
     font-size: 0.8em;
     font-weight: bold;
     padding: 12px 28px;
@@ -159,9 +173,10 @@ body {
     margin: 0;
     padding: 0;
 
+    font-family: 'Inter', sans-serif;
+
     color: rgb(165, 165, 165);
     font-size: 1em;
-    font-family: sans-serif;
     font-weight: no;
     margin-bottom: 15px;
 }
@@ -189,6 +204,7 @@ body {
     outline: none;
     border: none;
 
+    font-family: 'Inter', sans-serif;
     font-size: 1em;
     padding: 9px 12px;
 
@@ -200,14 +216,22 @@ body {
     outline: none;
     border: none;
 
+    font-family: inherit;
     font-size: 0.8em;
     font-weight: bold;
     padding: 6px 28px;
 
-    background-color: rgb(186, 37, 231);
-    color: white;
+    background-color: rgb(80, 80, 80);
+    color: rgb(216, 216, 216);
 
     cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#searchbtn:hover {
+    background-color: rgb(186, 37, 231);
+    color: white;
 }
 
 #newbtn {
@@ -219,13 +243,19 @@ body {
     padding: 12px 32px;
     box-sizing: border-box;
 
-    font-family: sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 0.8em;
     font-weight: bold;
 
     border-radius: 4px;
 
     cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#newbtn:hover {
+    background-color: rgba(216, 22, 250, 0.33);
 }
 
 .dt_table {
@@ -240,14 +270,18 @@ body {
     background-color: rgb(54, 54, 54);
     color: rgb(135, 135, 135);
 
-    font-family: sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1em;
 
-    transition: 0.2s ease;
+    transition: 0.1s linear;
+}
+
+.dt_closed {
+    opacity: 0.4;
 }
 
 .dt_row:hover {
-    background-color: rgb(45, 45, 45);
+    background-color: rgb(48, 48, 48);
     cursor: pointer;
 }
 
@@ -269,8 +303,11 @@ body {
     border-radius: 4px;
     width: 100%;
     text-align: center;
-    background-color: rgba(248, 62, 77, 0.6);
-    color: rgba(255, 255, 255, 0.58);
+
+    background-color: rgba(255, 255, 255, 0.082);
+    color: rgb(243, 69, 83);
+
+    font-family: 'Chivo Mono';
     font-weight: bold;
 
     padding: 6px;
@@ -280,8 +317,18 @@ body {
 }
 
 .dt_type_low {
-    background-color: rgb(68, 68, 68);
+    background-color: rgba(255, 255, 255, 0.082);
     color: rgb(82, 194, 114);
+}
+
+.dt_type_mid {
+    background-color: rgba(255, 255, 255, 0.082);
+    color: rgb(233, 161, 53);
+}
+
+.dt_type_xpress {
+    background-color: rgba(248, 62, 77, 0.6);
+    color: rgba(255, 255, 255, 0.58);
 }
 
 .dt_id {
@@ -289,20 +336,22 @@ body {
 }
 
 .dt_tid {
+    font-family: 'Chivo Mono';
+
     background-color: rgb(0, 0, 0, 0.12);
     padding: 6px;
     border-radius: 3px;
     box-sizing: border-box;
+
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .dt_cid span {
     opacity: 0.75;
     text-decoration: none;
-}
-
-.dt_cid:hover {
-    text-decoration: underline;
-    cursor: pointer;
 }
 
 #editfield {
@@ -314,7 +363,7 @@ body {
 #editfield #editbar1 {
     width: 100%;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 15px;
 
     margin-bottom: 15px;
@@ -325,14 +374,39 @@ body {
     outline: none;
     border: none;
 
+    font-family: inherit;
     font-size: 1em;
     padding: 9px 12px;
 
     background-color: rgb(58, 58, 58);
     color: rgb(197, 197, 197);
 
+    box-sizing: border-box;
     border-radius: 4px;
     overflow: hidden;
+}
+
+#editfield select {
+    width: 100%;
+    outline: none;
+    border: none;
+
+    font-family: inherit;
+    font-size: 1em;
+    padding: 9px 12px;
+
+    background-color: rgb(58, 58, 58);
+    color: rgb(197, 197, 197);
+
+    box-sizing: border-box;
+    border-radius: 4px;
+    overflow: hidden;
+
+    text-align: center;
+}
+
+#editfield option {
+    font-family: monospace;
 }
 
 #inTID {
@@ -353,8 +427,8 @@ body {
     outline: none;
     resize: none;
 
+    font-family: inherit;
     padding: 10px;
-    font-family: sans-serif;
     font-size: 1em;
 
     background-color: rgb(58, 58, 58);
@@ -364,31 +438,38 @@ body {
 }
 
 #btnbar {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 15px;
     margin-top: 25px;
+    width: 100%;
+
+    font-family: 'Inter', sans-serif;
 }
 
-#btnbar input {
+#btnbar .sbtn {
     width: 100%;
     outline: none;
     border: none;
 
+    text-decoration: none;
+    box-sizing: border-box;
+    display: block;
     font-size: 1em;
     padding: 12px 12px;
-
-    background-color: rgb(175, 175, 175);
-    color: rgb(48, 48, 48);
     font-weight: bold;
 
     border-radius: 4px;
     overflow: hidden;
     
     text-align: center;
+
+    cursor: pointer;
 }
 
-#btnbar #subx {
+#subsave {
+    background-color: rgb(175, 175, 175);
+    color: rgb(48, 48, 48);
+}
+
+.btncool {
     background-color: rgba(193, 41, 231, 0.3);
     color: rgb(219, 128, 255);
 }
@@ -399,4 +480,28 @@ body {
 
     background-color: rgb(65, 65, 65);
     color: rgb(190, 190, 190);
+
+    margin-top: 15px;
+}
+
+#subedit {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 15px;
+
+    width: 100%;
+}
+
+#sub2 {
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#subback {
+    background-color: rgb(58, 58, 58);
+    color: rgb(172, 172, 172);
+
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
