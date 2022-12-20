@@ -27,6 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     $sql = "UPDATE tickets SET tid = '{$tid}', active = {$active}, title = '{$title}', descr = '{$description}', prio = '{$prio}', date = '{$date}', cid = '{$cid}', abteilung = '{$abt}' WHERE tid = '{$tid}';";
+
     echo $sql;
     $sql_res = mysqli_query($dbcon, $sql);
 

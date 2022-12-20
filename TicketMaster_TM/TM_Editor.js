@@ -134,7 +134,6 @@ function openTicketEditor(tid) {
 
 function openNewTicketEditor() {
     open("TM_Editor.php", "_self");
-}
 
 function updateTicket() {
     var active = "1";
